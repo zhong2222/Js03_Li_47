@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <script src="js/jquery-2.1.3.min.js"></script>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/deqs.css">
     <title>ドライアイQOLチェック票</title>
 </head>
@@ -19,16 +20,15 @@
             問題を感じておられるかについてお聞かせいただき、健康管理の参考にさせていただくものです。<br> 
             質問に対しては難しく考えることなく、あなたの印象でお答えください。 </h3>
         
-        お名前:   <input id="name" type="text" class="box">
-        年齢：    <input id="age" type="text" class="box">
-        性別：   <select id="gender" type="text" class="box">
-                    <option value="NC">無</option>
-                    <option value="male">男</option>
-                    <option value="female">女</option>
+            ご記入日(必須): <input id="date" type="date" class="box">
+            お名前:   <input id="namae" type="text" class="box">
+            年齢：    <input id="age" type="text" class="box">
+            性別：   <select id="gender" type="text" class="box">
+                        <option value=""></option>
+                        <option value="男">男</option>
+                        <option value="女">女</option>
 
-                </select>
-
-        ご記入日(必須)： <input id="date" type="date" class="box">
+                    </select>
         
         <p>この１週間で次のような症状がありましたか？</p>
         <p id="quest">ここに問題が出題されます</p>
@@ -50,8 +50,9 @@
 
         <!-- 次へ BUTTON -->
         <input id="next-btn" type="button" value="次へ" class="btn hover" > 
+        
         <!-- 選択BUTTON -->
-        <ul>
+        <ul id="btn">
         <li><input id="show-btn" type="button" value="結果表示" class="btn hover" ></li>
         <li><input id="noshow-btn" type="button" value="結果非表示" class="btn hover" ></li>
         <li><input id="start-btn" type="button" value="回答する" class="btn hover" ></li>
@@ -63,22 +64,28 @@
         </ul> -->
 
         <!-- 結果（記録）表示 -->
-        <table id="menu">
-            <tr>
-                <th>日付</th>
-                <td>QOLスコア（0~100）目安（【0~30】良い　【30~60】要注意　【60超え】良くない</td>
-            </tr>
-
-        </table>
-        <table id="list">
+        <div id="result">
+            <p id="notice"> ※QOLスコア（0~100）目安（【0~30】良い　【30~60】要注意　【60超え】良くない</p>
+            <table id="menu">
+                <tr>
+                    <th>日付</th>
+                    <th>名前</th>
+                    <th>年齢</th>
+                    <th>性別</th>
+                    <th>QOLスコア</th>
+                </tr>
+            </table>
+            <table id="list">
             <!-- ここに追加データが挿入される -->
-        </table>
+            </table>
+        </div>
+
 
     </main>
 
     <!-- <footer>Copyright © 2012 Santen Pharmaceutical Co., Ltd. and Dry Eye Society in Japan.  All rights reserved.</footer> -->
 
-
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
 <script src="js/deqs.js"></script>
 </body>
 
