@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/deqs.css">
+    <title>ドライアイQOLチェック票</title>
+</head>
+
+<body>
+    <header>
+        <h1>ドライアイQOLチェック票（全15問）</h1>
+    </header>
+    <main>
+        <h2>目の症状と日常生活についての質問票</h2>
+        <h3>この質問票は、あなたがどの程度さまざまな目の症状を感じておられるか、あるいは日常生活でどのような<br>
+            問題を感じておられるかについてお聞かせいただき、健康管理の参考にさせていただくものです。<br> 
+            質問に対しては難しく考えることなく、あなたの印象でお答えください。 </h3>
+        
+        お名前:   <input id="name" type="text" class="box">
+        年齢：    <input id="age" type="text" class="box">
+        性別：   <select id="gender" type="text" class="box">
+                    <option value="NC">無</option>
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+
+                </select>
+
+        ご記入日(必須)： <input id="date" type="date" class="box">
+        
+        <p>この１週間で次のような症状がありましたか？</p>
+        <p id="quest">ここに問題が出題されます</p>
+        <p>A欄(頻度)</p>
+        <p>
+            <input id="qa1" type="radio" name="ta" value="0"><span id="ta1">選択肢１</span>
+            <input id="qa2" type="radio" name="ta" value="1"><span id="ta2">選択肢２</span>
+            <input id="qa3" type="radio" name="ta" value="2"><span id="ta3">選択肢３</span>
+            <input id="qa4" type="radio" name="ta" value="3"><span id="ta4">選択肢４</span>
+            <input id="qa5" type="radio" name="ta" value="4"><span id="ta5">選択肢５</span>
+        </p>
+        <p id="title-b">B欄(程度)</p>
+        <p id="table-b">
+            <input id="qb1" type="radio" name="tb" value="1"><span id="tb1">選択肢１</span>
+            <input id="qb2" type="radio" name="tb" value="2"><span id="tb2">選択肢２</span>
+            <input id="qb3" type="radio" name="tb" value="3"><span id="tb3">選択肢３</span>
+            <input id="qb4" type="radio" name="tb" value="4"><span id="tb4">選択肢４</span>
+        </p>
+
+        <!-- 次へ BUTTON -->
+        <input id="next-btn" type="button" value="次へ" class="btn hover" > 
+        <!-- 選択BUTTON -->
+        <ul>
+        <li><input id="show-btn" type="button" value="結果表示" class="btn hover" ></li>
+        <li><input id="noshow-btn" type="button" value="結果非表示" class="btn hover" ></li>
+        <li><input id="start-btn" type="button" value="回答する" class="btn hover" ></li>
+        <li><input id="clear-btn" type="button" value="記録削除" class="btn hover" ></li>
+        </ul>
+        <!-- <ul>
+            <li id="save">Save</li>
+            <li id="clear">Clear</li>
+        </ul> -->
+
+        <!-- 結果（記録）表示 -->
+        <table id="menu">
+            <tr>
+                <th>日付</th>
+                <td>QOLスコア（0~100）目安（【0~30】良い　【30~60】要注意　【60超え】良くない</td>
+            </tr>
+
+        </table>
+        <table id="list">
+            <!-- ここに追加データが挿入される -->
+        </table>
+
+    </main>
+
+    <!-- <footer>Copyright © 2012 Santen Pharmaceutical Co., Ltd. and Dry Eye Society in Japan.  All rights reserved.</footer> -->
+
+
+<script src="js/deqs.js"></script>
+</body>
+
+</html>

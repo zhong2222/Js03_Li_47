@@ -1,0 +1,144 @@
+@charset "utf8";
+html{
+  width: 1280px;
+  margin: auto;
+}
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 22px;
+}
+
+header {
+  background-color: darkblue;
+  border-bottom: 0px solid #ccc;
+  text-align: center;
+  color: #fff;
+}
+
+main {
+  border-bottom: 1px solid #ccc;
+}
+h3{
+  font-size:24px;
+  text-align: left;
+}
+footer {
+  background-color: darkblue;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+
+}
+
+p {
+  font-size: 100%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  height: 50px;
+}
+
+ul {
+  padding: 0;
+  /* border-top: 1px solid #000000; */
+  border: none;
+  display: table;
+  /* 定義 */
+  table-layout: fixed;
+  width: 75%;
+  margin: auto;
+}
+
+li {
+  text-align: center;
+  list-style-type: none;
+  /* border: 1px solid #666; */
+  border: none;
+  background-color: #FFF;
+  display: table-cell;
+  /* 定義 */
+  cursor: pointer;
+}
+
+/* li:hover {
+  background: #0066CC;
+  color: #fff;
+} */
+
+textarea{
+  margin: 3%;
+  width: 30%;
+  height: 30px;
+  font-size:50%;
+  box-shadow: 3px 3px 3px 3px #555;
+}
+.btn{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  display: block;
+  width: 150px;
+  margin: auto;
+  padding: 0;
+  background-color: #ffd61a;
+  color: #555;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#next-btn:hover {
+opacity: 0.6;
+  background: red
+}
+#show-btn:hover {
+  opacity: 0.6;
+    background: red
+}
+#noshow-btn:hover {
+  opacity: 0.6;
+    background: red
+}
+#start-btn:hover {
+  opacity: 0.6;
+    background: red
+}
+#clear-btn:hover {
+  opacity: 0.6;
+    background: red
+}
+textarea{
+  margin: 10px 3%;
+  width: 95%;
+  height: 100px;
+  font-size:80%;
+  box-shadow: 3px 3px 3px 3px #555;
+  background-color:rgb(241, 239, 239);
+}
+table{
+    margin: 20px 3%;
+    border:1px solid #8dc3f5;
+    width:96%;
+    
+}
+th{
+    width:30%;
+    font-size:24px;
+    background-color:#d0e7fc;
+    border-bottom: 1px solid #8dc3f5;
+}
+td{
+    font-size:16px;
+    background-color:rgb(241, 239, 239);
+    border-bottom: 1px solid #8dc3f5;
+}
+.box{
+  margin-top: 20px;
+  margin:2% 3%;
+  width: 10%;
+  font-size:75%;
+  background-color: #d0e7fc;
+  box-shadow: 3px 3px 3px 3px #555;
+}
